@@ -1,27 +1,24 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+    <div id="app">
+        <v-app light>
+            <v-toolbar class="white">
+                <v-toolbar-title v-text="title"></v-toolbar-title>
+            </v-toolbar>
+            <main>            
+                <router-view></router-view>
+            </main>
+        </v-app>
+    </div>
 </template>
 
-<style>
-body {
-  margin: 0;
-  font-size: 2rem;
-  font-family: -apple-system, BlinkMacSystemFont,
-               'avenir next', avenir,
-               helvetica, 'helvetica neue',
-               Ubuntu,
-               'segoe ui', arial,
-               sans-serif;
+<<script>
+
+export default {
+    data: {
+        title: "Agarwal Investment Consultant"
+    }
 }
-.page {
-  text-align: center;
-  /* nesting for the need to test postcss */
-  code {
-    background-color: #f0f0f0;
-    padding: 3px 5px;
-    border-radius: 2px;
-  }
-}
-</style>
+
+</script>
+
+<style></style>
